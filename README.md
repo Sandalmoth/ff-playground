@@ -7,8 +7,11 @@ Anyway, the fitness fatigue model is a pretty cool model for predicting the effe
 
 Mark Pfeiffer, Modeling the Relationship between Training and Perfomance - A Comparison of Two Antagonistic Concepts
 
-supersimple.R
+supersimple.R --
 simple calculation and plotting of performance function using preset workload and arbitrary units
+
+simplewithparsing.R --
+same as supersimple but reads workload vector from a .csv (see example)
 
 ...Add some descriptions of scripts when they are done :P
 for now, just run stuff with Rscript or something and see for yourself
