@@ -46,9 +46,12 @@ epley = function(I) {
 # R is suprisingly convenient
 wtable$Workload = wtable$Sets * wtable$Reps / epley(wtable$Intensity)
 
-# wtable
+wtable
 
-w[wtable$Timestep] = wtable$Workload
+for (i in 1:length(wtable$Day)) {
+	w[wtable$Timestep[i]] = w[wtable$Timestep[i]] + wtable$Workload[i]
+}
+# w[wtable$Timestep] = wtable$Workload
 
 # get a plot for easy overview
 plot(w~t)
