@@ -32,8 +32,8 @@ class FF:
         self.fatigue = sum([self.work[i] * math.exp((i - len(self.work)) / self.t2) for i in range(len(self.work))])
         self.performance = self.g(self.fitness) - self.h(self.fatigue)
         # store results
-        self.trace['fitness'].append(self.fitness)
-        self.trace['fatigue'].append(self.fatigue)
+        self.trace['fitness'].append(self.g(self.fitness))
+        self.trace['fatigue'].append(self.h(self.fatigue))
         self.trace['performance'].append(self.performance)
 
         self.t += 1
